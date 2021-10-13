@@ -3,4 +3,7 @@ def solution(n):
 
     # 또는
     # answer = sum([int(x) for x in str(n)])
+    
     return answer
+
+# 또는 재귀
