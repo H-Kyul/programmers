@@ -8,6 +8,9 @@ def solution(weights, head2head):
             winrate = 0
         else:
             winrate = len([x for x in WL if x=='W'])/playcnt*100 # 승률
+            # 이긴 횟수는 다음과 같이 수정 가능
+            # winrate = WL.count('W')/playcnt*100 # 승률
+
         w = weights[i] # w: weight
         for j in range(len(weights)):
             if (w < weights[j]) & (WL[j] == 'W'):
