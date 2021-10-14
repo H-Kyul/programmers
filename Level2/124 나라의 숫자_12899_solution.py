@@ -28,7 +28,24 @@ def solution(n):
 '''
 
 
+# 다른 사람의 풀이 -1  -- 최종 풀이에서 불필요한 부분이 보임
+def change124(n):
+    num = ['1','2','4']
+    answer = ""
+    while n > 0:
+        n -= 1
+        answer = num[n % 3] + answer
+        n //= 3
 
+    return answer
+
+# 다른 사람의 풀이 -2  -- 만들고 싶었던 
+def change124(n):
+    if n<=3:
+        return '124'[n-1]
+    else:
+        q, r = divmod(n-1, 3) 
+        return change124(q) + '124'[r]
 
 #######################################실패의 흔적들#############################################
 
