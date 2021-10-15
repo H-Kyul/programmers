@@ -1,3 +1,29 @@
+# 다섯번째, 문제점은?? 다시 런타임에러 발생
+def solution(s):
+    s = list(s)
+    templist = list(s)
+    
+    while(True):
+        for a,b in zip(s,s[1:]):
+            if a == b:
+                templist.remove(a)
+                templist.remove(b)
+                print(templist)
+        
+        if s == templist:
+            break
+        elif templist == []:
+            break
+        else:
+            s = list(templist) 
+        
+    if templist == []:
+        return 1
+    else:
+        return 0
+        
+
+
 # 네번째, while문 return 삭제, break로 변경, while문 밖에 return 조건
     if new_s != '':
         return 0
