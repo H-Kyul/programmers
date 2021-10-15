@@ -1,3 +1,43 @@
+# 네번째, while문 return 삭제, break로 변경, while문 밖에 return 조건
+    if new_s != '':
+        return 0
+    else:
+        return 1
+        
+
+
+# 세번째, return 0을 while문 밖으로
+# ....   동일 ....
+        if s == list(new_s):
+            break
+# ..... 동일 .....
+    return 0
+        
+
+
+# 실패 코드2 : while 반복문 (정확성: 시간초과 / 효율성: ??)
+def solution(s):
+    
+    s = list(s)
+    new_s = []
+    
+    while(True):
+        for i in range(1,len(s)):
+            if s[i] == s[i-1]:
+                s[i] = ''
+                s[i-1] = ''
+        new_s = ''.join(s)
+        if s == list(new_s):
+            return 0
+        elif new_s == '':
+            return 1
+        else:
+            s = list(new_s)
+        
+
+        
+
+
 # 실패 코드 : 재귀 (정확성: 런타임에러 / 효율성: 시간초과)
 def solution(s):
     def matching(s):
