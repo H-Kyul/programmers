@@ -1,4 +1,25 @@
-# 다섯번째, 문제점은?? 다시 런타임에러 발생
+# 최종 -- while반복문없이 
+
+def solution(s):
+    s = list(s)
+    new_s = []
+    for i in s:
+        if new_s == []:
+            new_s.append(i)
+        else:
+            if i != new_s[-1]:
+                new_s.append(i)
+            else:
+                new_s.pop()
+                
+    if new_s == []:
+        return 1
+    else:
+        return 0
+    
+    
+
+# 실패 코드3, 런타임에러! --- 이유: templist에서만 remove하고 비교는 s를 통해 하니깐
 def solution(s):
     s = list(s)
     templist = list(s)
@@ -24,24 +45,7 @@ def solution(s):
         
 
 
-# 네번째, while문 return 삭제, break로 변경, while문 밖에 return 조건
-    if new_s != '':
-        return 0
-    else:
-        return 1
-        
-
-
-# 세번째, return 0을 while문 밖으로
-# ....   동일 ....
-        if s == list(new_s):
-            break
-# ..... 동일 .....
-    return 0
-        
-
-
-# 실패 코드2 : while 반복문 (정확성: 시간초과 / 효율성: ??)
+# 실패 코드2 : while 반복문 (정확성: 시간초과 / 효율성: ??)  -- while문에서 return -> break로 변경, 밖으로 return해도 실패
 def solution(s):
     
     s = list(s)
