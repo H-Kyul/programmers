@@ -1,10 +1,10 @@
-# 답안
+# 답안 , 스택큐 문제인데 사용하지 않음. 다시 풀어보기.
 
 def solution(prices):
     l = len(prices)
     seconds = []
-    cnt= 0
     for i in range(l):
+        cnt= 0
         cmp1 = prices[i]    
         for j in range(i+1,l):
             cmp2 = prices[j]
@@ -14,5 +14,4 @@ def solution(prices):
             else:
                 cnt+=1
         seconds.append(cnt)
-        cnt = 0 # reset cnt
     return seconds
