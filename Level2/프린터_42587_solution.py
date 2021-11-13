@@ -1,3 +1,26 @@
+# 풀이 2 : heap 자료구조 풀이
+
+def solution(priorities, loc):
+    import heapq
+    cnt = 0
+    heap = []
+        
+    for item in priorities:
+        heapq.heappush(heap, -item)
+
+    while heap:
+        for i in range(len(priorities)):
+            if priorities[i] == -heap[0]:
+                heapq.heappop(heap)
+                cnt += 1
+                if i == loc:
+                    return cnt
+
+            
+                
+
+# 풀이 1 : queue 
+
 def solution(priorities, loc):
     from collections import deque
     
