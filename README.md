@@ -1,2 +1,2 @@
-# programmers
- programmers 문제 풀이
+# Programmers
+ Programmers 문제 풀이 with Python
